@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.sg.foundations.flowcontrol.ifs;
+
+import java.util.Scanner;
+
+public class PickyEater {
+
+    public static void main(String[] args) {
+        Scanner userInput = new Scanner(System.in);
+
+        System.out.print("How many times has it been fried? (#) ");
+        int timesFried = Integer.parseInt(userInput.nextLine());
+
+        System.out.print("Does it have any spinach in it? (y/n) ");
+        String hasSpinach = userInput.nextLine();
+
+        System.out.print("Is it covered in cheese? (y/n) ");
+        String cheeseCovered = userInput.nextLine();
+
+        System.out.print("How many pats of butter are on top? (#) ");
+        int butterPats = Integer.parseInt(userInput.nextLine());
+
+        System.out.print("Is it covered in chocolate? (y/n) ");
+        String chocolatedCovered = userInput.nextLine();
+
+        System.out.print("Does it have a funny name? (y/n) ");
+        String funnyName = userInput.nextLine();
+
+        System.out.print("Is it broccoli? (y/n) ");
+        String isBroccoli = userInput.nextLine();
+
+        // Conditionals should go here! Here's the first one for FREE!
+
+        if (hasSpinach.equals("y") || funnyName.equals("y")) {
+            System.out.println("There's no way he'll eat that!");
+        } else if (timesFried > 2 && timesFried < 4 && chocolatedCovered.contains ("y")) {
+            System.out.println("Oh, it's like a deep-fried Snickers. That'll be a hit!");
+        } else if (timesFried == 2 && cheeseCovered.contains ("y")) {
+            System.out.println("Mmm. Yeah, he'll each fried cheesy doodles");
+        } else if (isBroccoli.contains ("y") && butterPats >= 6 && cheeseCovered.contains("y"))  {
+            System.out.println("As long as the green is hidden by cheddar, it'll happen!");
+        } else if (isBroccoli.contains ("y")) {
+            System.out.println("Oh, green stuff like that might as well go in the bin.");
+        } else {
+            System.out.println("Nope! Not a chance!");
+        }
+    }
+}
