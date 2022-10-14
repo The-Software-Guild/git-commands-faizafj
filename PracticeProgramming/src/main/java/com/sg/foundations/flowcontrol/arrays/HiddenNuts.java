@@ -18,11 +18,9 @@ public class HiddenNuts {
         // Nut finding code should go here! 
 
         for(int i = 0; i < hidingSpots.length; i++){
-            if (hidingSpots[i].contains("Nut")){
-                System.out.println(i);
-            } else {
-                continue
-            }
+            if (hidingSpots[i]!= null) {
+                System.out.println("The nut is in position: " + i);
+            } 
         }
     }
 }
