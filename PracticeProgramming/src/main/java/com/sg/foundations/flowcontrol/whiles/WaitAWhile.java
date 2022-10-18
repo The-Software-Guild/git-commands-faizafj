@@ -1,20 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.sg.foundations.flowcontrol.whiles;
 
 public class WaitAWhile {
 
     public static void main(String[] args) {
 
-        int timeNow = 5; //chaning this to 11 and the bedtime to 11 means it will print guess i should got to bed
-        int bedTime = 10; //changing the value to 11 just means it runs an extra time
+        int timeNow = 5; //changing this to a higher number means the loop doesnt run as its condition is not met and goes straight to the rest of the code
+        int bedTime = 10;  //changing the bedtime to 11 means that the loop runs one more time (6 times
 
         while (timeNow < bedTime) {
             System.out.println("It's only " + timeNow + " o'clock!");
             System.out.println("I think I'll stay up just a liiiiittle longer....");
-            timeNow++; // Time passes recursion because theres no break clause.
+            timeNow++; // Time passes The loop next breaks out as the time doesn't change.
         }
 
         System.out.println("Oh. It's " + timeNow + " o'clock.");

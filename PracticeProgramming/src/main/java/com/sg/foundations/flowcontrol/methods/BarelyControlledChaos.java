@@ -3,21 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.sg.foundations.flowcontrol.methods;
+import java.util.Random;
 
 public class BarelyControlledChaos {
 
     public static void main(String[] args) {
 
         String color = color(); // call color method here
-        String animal = ???; // call animal method again here
-        String colorAgain = ???; // call color method again here
-        double weight = ???; // call number method,
+        String animal = animal(); // call animal method again here
+        String colorAgain = color(); // call color method again here
+        double weight = numberMethod(5, 200); // call number method,
             // with a range between 5 - 200
-        double distance = ???; // call number method,
+        double distance = numberMethod(10, 20); // call number method,
             // with a range between 10 - 20
-        int number = ???; // call number method,
+        int number = numberMethod(10000, 20000); // call number method,
             // with a range between 10000 - 20000
-        double time = ???; // call number method,
+        double time = numberMethod(2, 6); // call number method,
             // with a range between 2 - 6            
 
         System.out.println("Once, when I was very small...");
@@ -34,7 +35,34 @@ public class BarelyControlledChaos {
             + "let me tell you!");
     }
 
-    // ??? Method 1 ???
+    
+        public static String color(){
+            Random randomPicker = new Random();
+            String [] colorSelection = new String[]{ 
+                "red" , "yellow", "pink", "green", "orange" //A list of all the colours. 
+            };
+            int randomIndex = randomPicker.nextInt( colorSelection.length ); //gets a random number from the length of the list
+            String colorSelected = colorSelection[randomIndex]; //selects the value chosen by the random index
+            
+            return colorSelected;
+        }
     // ??? Method 2 ???
+        
+        public static String animal(){
+            Random randomPicker = new Random();
+            String [] animalSelection = new String[]{ 
+                "Zebra" , "Lion", "Tiger", "Elephant", "Monkey" //A list of all the animals. 
+            };
+            int randomIndex = randomPicker.nextInt( animalSelection.length ); //gets a random number from the length of the list
+            String animalSelected = animalSelection[randomIndex]; //selects the value chosen by the random index
+            
+            return animalSelected;
+        }
     // ??? Method 3 ???
+        
+            public static int numberMethod (int a, int b){
+            Random randomPicker = new Random();
+            int numberSelected = randomPicker.nextInt(a , b);   
+            return numberSelected;
+        }
 }

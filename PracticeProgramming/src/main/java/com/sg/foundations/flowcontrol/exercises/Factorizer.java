@@ -1,4 +1,4 @@
-package com.sg.foundations.flowcontrol.excersizes;
+package com.sg.foundations.flowcontrol.exercises;
 
 import java.util.Scanner;
 
