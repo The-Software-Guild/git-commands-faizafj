@@ -17,7 +17,7 @@ public class HealthyHearts {
         Scanner userInput = new Scanner(System.in); //uses the Scanner and defines it as userInput
         System.out.print("Enter your age: "); 
         int age = Integer.parseInt((userInput.nextLine())); // Allows user to input age
-        
+
         
         double maxHeartRange = 220 - age; //maxHeartRange
         double heartRateZoneFifty = maxHeartRange / 2;  //heartRateZone target minimum
